@@ -1,0 +1,577 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+body {
+  font-family: "Roboto", sans-serif; /* Используем шрифт Roboto */
+}
+
+.first-bg {
+  background-image: url("./img/Group\ 2\ \(1\).png"); /* Указываем путь к изображению */
+  background-size: cover; /* Изображение будет масштабироваться, чтобы покрыть весь элемент */
+  background-position: center; /* Центрируем изображение по всему элементу */
+  background-repeat: no-repeat; /* Изображение не будет повторяться */
+  height: 100vh;
+  width: 100vw;
+  padding-top: 82px;
+  padding-inline: 44px;
+
+  &__main-text {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    margin-bottom: 30px;
+    font-weight: 300;
+    font-size: 14px;
+
+    @media screen and (min-width: 640px) {
+      font-size: 25px;
+    }
+  }
+  &__second-text {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    margin-bottom: 70px;
+    font-weight: 600;
+    font-size: 27px;
+    text-align: center;
+    background: linear-gradient(90deg, #ff8d5c 0%, #e3f385 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &__third-text {
+    width: 240px;
+    color: #fff;
+    margin-bottom: 30px;
+
+    margin-bottom: 30px;
+    font-weight: 300;
+    font-size: 17px;
+
+    @media screen and (min-width: 640px) {
+      width: 400px;
+
+      font-size: 25px;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    width: 250px;
+    bottom: 50px;
+    cursor: pointer; /* Курсор "рука" при наведении */
+
+    @media screen and (min-width: 640px) {
+      width: 400px;
+    }
+
+    @media screen and (max-height: 620px) {
+      right: 0;
+    }
+
+    @media screen and (max-height: 360px) {
+      width: 300px;
+    }
+    &-text {
+      position: absolute;
+      top: 50%; /* Центрируем текст по вертикали */
+      left: 50%; /* Центрируем текст по горизонтали */
+      transform: translate(-130%, -50%);
+    }
+  }
+}
+.second-bg {
+  background-image: url("./img/1111\ \(1\).png");
+  background-size: cover; /* Изображение будет масштабироваться, чтобы покрыть весь элемент */
+  background-position: center; /* Центрируем изображение по всему элементу */
+  background-repeat: no-repeat;
+  padding-inline: 44px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  color: #fff;
+
+  & img {
+    width: 70px;
+  }
+
+  &-h3 {
+    font-weight: 400;
+    font-size: 20px;
+  }
+
+  &__flex {
+    display: flex;
+    column-gap: 32px;
+    row-gap: 87px;
+    margin-bottom: 25px;
+
+    & img {
+      width: 20px;
+    }
+  }
+
+  &__ask {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 25px;
+  }
+
+  &__second-text {
+    display: flex;
+    justify-content: center;
+
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  &__third-text-one {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    margin-bottom: 20px;
+
+    font-weight: 300;
+    font-size: 20px;
+  }
+  &__third-text-two {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    font-weight: 300;
+    font-size: 20px;
+  }
+}
+
+.ellipse {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%; /* Скругление до круга */
+  background-color: #fb28ff; /* Цвет заливки */
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.third-bg {
+  background-color: #000000;
+  background-size: cover; /* Изображение будет масштабироваться, чтобы покрыть весь элемент */
+  background-position: center; /* Центрируем изображение по всему элементу */
+  background-repeat: no-repeat;
+
+  color: #fff;
+
+  padding-inline: 20px;
+  padding-top: 40px;
+  padding-bottom: 60px;
+
+  & img {
+    width: 70px;
+    z-index: 1;
+    position: absolute;
+
+    top: 50%; /* Центрируем по вертикали */
+    left: 50%; /* Центрируем по горизонтали */
+    transform: translate(-50%, -100%);
+  }
+
+  &__main {
+    position: relative;
+  }
+
+  &__main-text-one {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    text-align: center;
+    z-index: 3;
+
+    margin-bottom: 50px;
+
+    font-weight: 400;
+    font-size: 30px;
+    opacity: 70%;
+  }
+
+  &__main-text-two {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    text-align: center;
+    z-index: 3;
+
+    font-weight: 400;
+    font-size: 30px;
+    margin-bottom: 30px;
+    opacity: 70%;
+  }
+
+  &-flex {
+    display: flex;
+    justify-content: center;
+
+    font-weight: 300;
+    font-size: 10px;
+
+    &-in {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      & h2 {
+        margin-bottom: 10px;
+        font-weight: 400;
+        font-size: 15px;
+
+        @media screen and (min-width: 640px) {
+          font-size: 25px;
+        }
+      }
+
+      & h3 {
+        font-weight: 300;
+        font-size: 10px;
+
+        @media screen and (min-width: 640px) {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+.line {
+  @media screen and (min-width: 640px) {
+    display: none;
+  }
+}
+
+.fourth-bg {
+  background-image: url("./img/7.png");
+  background-size: cover; /* Изображение будет масштабироваться, чтобы покрыть весь элемент */
+  background-position: center; /* Центрируем изображение по всему элементу */
+  background-repeat: no-repeat;
+  width: 100vw;
+  padding-inline: 44px;
+  color: #fff;
+  padding-bottom: 10px;
+
+  & h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    opacity: 70%;
+
+    font-weight: 600;
+    font-size: 35px;
+  }
+
+  &__lesson {
+    border: 2px solid #e5bd66;
+    border-radius: 20px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 50px;
+    padding-inline: 20px;
+    padding-bottom: 20px;
+    padding-top: 30px;
+    background-color: #00000091; /* Фиолетовый цвет */
+
+    @media screen and (min-width: 450px) {
+      padding-top: 50px;
+    }
+
+    @media screen and (min-width: 640px) {
+      padding-top: 80px;
+      padding-left: 10%;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-right: 17%;
+    }
+
+    & h2 {
+      font-weight: 500;
+      font-size: 20px;
+    }
+
+    & p {
+      font-weight: 300;
+      font-size: 12px;
+
+      @media screen and (min-width: 640px) {
+        font-size: 20px;
+        width: 50%;
+      }
+    }
+
+    &-block {
+      position: absolute;
+      top: -15px;
+
+      &-abs {
+        position: absolute;
+      }
+    }
+
+    &-num {
+      width: 60%;
+    }
+
+    &-money {
+      width: 70px;
+      position: absolute;
+
+      top: calc(0px - 20%);
+      right: calc(0px - 10%);
+
+      @media screen and (min-width: 640px) {
+        padding-top: 50px;
+        width: 100px;
+
+        top: calc(0px - 37%);
+        right: calc(0px - 5%);
+      }
+      @media screen and (min-width: 980px) {
+        top: calc(0px - 37%);
+        right: calc(0px - 1%);
+      }
+    }
+
+    &-text {
+      position: absolute;
+
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -100%);
+    }
+  }
+}
+
+.fifth-bg {
+  background-image: url("./img/1111\ \(4\).png");
+  background-size: cover; /* Изображение будет масштабироваться, чтобы покрыть весь элемент */
+  background-position: center; /* Центрируем изображение по всему элементу */
+  background-repeat: no-repeat;
+  color: #fff;
+  padding-inline: 44px;
+  padding-top: 25px;
+  text-align: center;
+
+  & p {
+    font-weight: 400;
+    font-size: 15px;
+  }
+
+  &-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    column-gap: 25px;
+
+    & h2 {
+      font-weight: 300;
+      font-size: 27px;
+    }
+
+    & h3 {
+      font-weight: 500;
+      font-size: 27px;
+    }
+  }
+
+  &__button {
+    width: 90%;
+
+    @media screen and (min-width: 640px) {
+      margin-top: 30px;
+      width: 50%;
+    }
+  }
+}
+
+.seventh-bg {
+  background-image: url("./img/1111\ \(2\).png");
+  background-size: cover; /* Изображение будет масштабироваться, чтобы покрыть весь элемент */
+  background-position: center; /* Центрируем изображение по всему элементу */
+  background-repeat: no-repeat;
+
+  color: #fff;
+
+  text-align: center;
+  padding-top: 20px;
+  padding-inline: 20px;
+  padding-bottom: 20px;
+
+  & h1 {
+    font-weight: 600;
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+
+  &__block {
+    margin-bottom: 20px;
+
+    & img {
+      width: 50px;
+      margin: 7px;
+    }
+
+    & h2 {
+      margin: 7px;
+      color: #fb28ff;
+      font-size: 20px;
+    }
+  }
+}
+
+.eighth-bg {
+  background-image: url("./img/1111\ \(4\).png");
+  background-size: cover; /* Изображение будет масштабироваться, чтобы покрыть весь элемент */
+  background-position: center; /* Центрируем изображение по всему элементу */
+  background-repeat: no-repeat;
+  color: #fff;
+  padding-inline: 44px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  text-align: center;
+
+  & h1 {
+    opacity: 70%;
+
+    font-weight: 600;
+    font-size: 35px;
+    margin-bottom: 15px;
+  }
+
+  &__block {
+    border: 5px solid #e5bd66;
+    width: 100%;
+    padding-top: 15px;
+    padding-inline: 15px;
+    padding-bottom: 15px;
+
+    &-block {
+      & img {
+        width: 70%;
+        margin-bottom: 10px;
+      }
+      & h2 {
+        font-weight: 500;
+        font-size: 25px;
+      }
+
+      & p {
+        font-weight: 300;
+        font-size: 15px;
+        margin-bottom: 20px;
+
+        @media screen and (min-width: 640px) {
+          font-size: 20px;
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+}
+
+.qwerty {
+  width: 90%;
+  display: block;
+  margin-bottom: 50px;
+  margin: 0 auto;
+
+  @media screen and (min-width: 640px) {
+    margin-top: 30px;
+    width: 30%;
+  }
+}
+
+.ninth-bg {
+  background-color: black;
+  background-size: cover; /* Изображение будет масштабироваться, чтобы покрыть весь элемент */
+  background-position: center; /* Центрируем изображение по всему элементу */
+  background-repeat: no-repeat;
+  color: #fff;
+  padding-inline: 44px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  text-align: center;
+
+  & h1 {
+    margin-bottom: 30px;
+
+    opacity: 70%;
+
+    font-weight: 600;
+    font-size: 35px;
+  }
+
+  &-p {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 15px;
+    display: block;
+    margin: 0 auto;
+
+    @media screen and (min-width: 640px) {
+      font-size: 30px;
+    }
+  }
+  & p {
+    margin-bottom: 20px;
+    font-size: 15px;
+  }
+
+  & h2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #fb28ff;
+  }
+
+  &-mask {
+    width: 20%;
+    margin-bottom: 10px;
+    @media screen and (min-width: 640px) {
+      margin-top: 30px;
+      width: 10%;
+    }
+  }
+
+  &-sv {
+    font-weight: 400;
+    font-size: 40px;
+    opacity: 50%;
+    letter-spacing: 5px;
+  }
+}
+
+.purple-background {
+  background-color: #ff00ff3d; /* Фиолетовый цвет */
+  padding: 20px; /* Добавление отступов для визуального комфорта */
+  color: white; /* Белый цвет текста для контраста */
+  border-radius: 10px;
+}
+
+.df {
+  @media screen and (min-width: 640px) {
+    margin: 0 auto;
+    width: 50%;
+  }
+}

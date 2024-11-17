@@ -1,0 +1,530 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: "Roboto", sans-serif; /* Используем шрифт Roboto */
+}
+
+.first-bg {
+  background-image: url("./img/Group 2 (1).png"); /* Указываем путь к изображению */
+  background-size: cover; /* Изображение будет масштабироваться, чтобы покрыть весь элемент */
+  background-position: center; /* Центрируем изображение по всему элементу */
+  background-repeat: no-repeat; /* Изображение не будет повторяться */
+  height: 100vh;
+  width: 100vw;
+  padding-top: 82px;
+  padding-inline: 44px;
+}
+.first-bg__main-text {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  margin-bottom: 30px;
+  font-weight: 300;
+  font-size: 14px;
+}
+@media screen and (min-width: 640px) {
+  .first-bg__main-text {
+    font-size: 25px;
+  }
+}
+.first-bg__second-text {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  margin-bottom: 70px;
+  font-weight: 600;
+  font-size: 27px;
+  text-align: center;
+  background: linear-gradient(90deg, #ff8d5c 0%, #e3f385 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.first-bg__third-text {
+  width: 240px;
+  color: #fff;
+  margin-bottom: 30px;
+  margin-bottom: 30px;
+  font-weight: 300;
+  font-size: 17px;
+}
+@media screen and (min-width: 640px) {
+  .first-bg__third-text {
+    width: 400px;
+    font-size: 25px;
+  }
+}
+.first-bg__button {
+  position: absolute;
+  width: 250px;
+  bottom: 50px;
+  cursor: pointer; /* Курсор "рука" при наведении */
+}
+@media screen and (min-width: 640px) {
+  .first-bg__button {
+    width: 400px;
+  }
+}
+@media screen and (max-height: 620px) {
+  .first-bg__button {
+    right: 0;
+  }
+}
+@media screen and (max-height: 360px) {
+  .first-bg__button {
+    width: 300px;
+  }
+}
+.first-bg__button-text {
+  position: absolute;
+  top: 50%; /* Центрируем текст по вертикали */
+  left: 50%; /* Центрируем текст по горизонтали */
+  transform: translate(-130%, -50%);
+}
+
+.second-bg {
+  background-image: url("./img/1111 (1).png");
+  background-size: cover; /* Изображение будет масштабироваться, чтобы покрыть весь элемент */
+  background-position: center; /* Центрируем изображение по всему элементу */
+  background-repeat: no-repeat;
+  padding-inline: 44px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  color: #fff;
+}
+.second-bg img {
+  width: 70px;
+}
+.second-bg-h3 {
+  font-weight: 400;
+  font-size: 20px;
+}
+.second-bg__flex {
+  display: flex;
+  column-gap: 32px;
+  row-gap: 87px;
+  margin-bottom: 25px;
+}
+.second-bg__flex img {
+  width: 20px;
+}
+.second-bg__ask {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+.second-bg__second-text {
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.second-bg__third-text-one {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 300;
+  font-size: 20px;
+}
+.second-bg__third-text-two {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.ellipse {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%; /* Скругление до круга */
+  background-color: #fb28ff; /* Цвет заливки */
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.third-bg {
+  background-color: #000000;
+  background-size: cover; /* Изображение будет масштабироваться, чтобы покрыть весь элемент */
+  background-position: center; /* Центрируем изображение по всему элементу */
+  background-repeat: no-repeat;
+  color: #fff;
+  padding-inline: 20px;
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+.third-bg img {
+  width: 70px;
+  z-index: 1;
+  position: absolute;
+  top: 50%; /* Центрируем по вертикали */
+  left: 50%; /* Центрируем по горизонтали */
+  transform: translate(-50%, -100%);
+}
+.third-bg__main {
+  position: relative;
+}
+.third-bg__main-text-one {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  z-index: 3;
+  margin-bottom: 50px;
+  font-weight: 400;
+  font-size: 30px;
+  opacity: 70%;
+}
+.third-bg__main-text-two {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  z-index: 3;
+  font-weight: 400;
+  font-size: 30px;
+  margin-bottom: 30px;
+  opacity: 70%;
+}
+.third-bg-flex {
+  display: flex;
+  justify-content: center;
+  font-weight: 300;
+  font-size: 10px;
+}
+.third-bg-flex-in {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.third-bg-flex-in h2 {
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 15px;
+}
+@media screen and (min-width: 640px) {
+  .third-bg-flex-in h2 {
+    font-size: 25px;
+  }
+}
+.third-bg-flex-in h3 {
+  font-weight: 300;
+  font-size: 10px;
+}
+@media screen and (min-width: 640px) {
+  .third-bg-flex-in h3 {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .line {
+    display: none;
+  }
+}
+
+.fourth-bg {
+  background-image: url("./img/7.png");
+  background-size: cover; /* Изображение будет масштабироваться, чтобы покрыть весь элемент */
+  background-position: center; /* Центрируем изображение по всему элементу */
+  background-repeat: no-repeat;
+  width: 100vw;
+  padding-inline: 44px;
+  color: #fff;
+  padding-bottom: 10px;
+}
+.fourth-bg h1 {
+  text-align: center;
+  margin-bottom: 50px;
+  opacity: 70%;
+  font-weight: 600;
+  font-size: 35px;
+}
+.fourth-bg__lesson {
+  border: 2px solid #e5bd66;
+  border-radius: 20px;
+  width: 100%;
+  position: relative;
+  margin-bottom: 50px;
+  padding-inline: 20px;
+  padding-bottom: 20px;
+  padding-top: 30px;
+  background-color: rgba(0, 0, 0, 0.568627451); /* Фиолетовый цвет */
+}
+@media screen and (min-width: 450px) {
+  .fourth-bg__lesson {
+    padding-top: 50px;
+  }
+}
+@media screen and (min-width: 640px) {
+  .fourth-bg__lesson {
+    padding-top: 80px;
+    padding-left: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 17%;
+  }
+}
+.fourth-bg__lesson h2 {
+  font-weight: 500;
+  font-size: 20px;
+}
+.fourth-bg__lesson p {
+  font-weight: 300;
+  font-size: 12px;
+}
+@media screen and (min-width: 640px) {
+  .fourth-bg__lesson p {
+    font-size: 20px;
+    width: 50%;
+  }
+}
+.fourth-bg__lesson-block {
+  position: absolute;
+  top: -15px;
+}
+.fourth-bg__lesson-block-abs {
+  position: absolute;
+}
+.fourth-bg__lesson-num {
+  width: 60%;
+}
+.fourth-bg__lesson-money {
+  width: 70px;
+  position: absolute;
+  top: calc(0px - 20%);
+  right: calc(0px - 10%);
+}
+@media screen and (min-width: 640px) {
+  .fourth-bg__lesson-money {
+    padding-top: 50px;
+    width: 100px;
+    top: calc(0px - 37%);
+    right: calc(0px - 5%);
+  }
+}
+@media screen and (min-width: 980px) {
+  .fourth-bg__lesson-money {
+    top: calc(0px - 37%);
+    right: calc(0px - 1%);
+  }
+}
+.fourth-bg__lesson-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+
+.fifth-bg {
+  background-image: url("./img/1111 (4).png");
+  background-size: cover; /* Изображение будет масштабироваться, чтобы покрыть весь элемент */
+  background-position: center; /* Центрируем изображение по всему элементу */
+  background-repeat: no-repeat;
+  color: #fff;
+  padding-inline: 44px;
+  padding-top: 25px;
+  text-align: center;
+}
+.fifth-bg p {
+  font-weight: 400;
+  font-size: 15px;
+}
+.fifth-bg-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  column-gap: 25px;
+}
+.fifth-bg-flex h2 {
+  font-weight: 300;
+  font-size: 27px;
+}
+.fifth-bg-flex h3 {
+  font-weight: 500;
+  font-size: 27px;
+}
+.fifth-bg__button {
+  width: 90%;
+}
+@media screen and (min-width: 640px) {
+  .fifth-bg__button {
+    margin-top: 30px;
+    width: 50%;
+  }
+}
+
+.seventh-bg {
+  background-image: url("./img/1111 (2).png");
+  background-size: cover; /* Изображение будет масштабироваться, чтобы покрыть весь элемент */
+  background-position: center; /* Центрируем изображение по всему элементу */
+  background-repeat: no-repeat;
+  color: #fff;
+  text-align: center;
+  padding-top: 20px;
+  padding-inline: 20px;
+  padding-bottom: 20px;
+}
+.seventh-bg h1 {
+  font-weight: 600;
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+.seventh-bg__block {
+  margin-bottom: 20px;
+}
+.seventh-bg__block img {
+  width: 50px;
+  margin: 7px;
+}
+.seventh-bg__block h2 {
+  margin: 7px;
+  color: #fb28ff;
+  font-size: 20px;
+}
+
+.eighth-bg {
+  background-image: url("./img/1111 (4).png");
+  background-size: cover; /* Изображение будет масштабироваться, чтобы покрыть весь элемент */
+  background-position: center; /* Центрируем изображение по всему элементу */
+  background-repeat: no-repeat;
+  color: #fff;
+  padding-inline: 44px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  text-align: center;
+}
+.eighth-bg h1 {
+  opacity: 70%;
+  font-weight: 600;
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+.eighth-bg__block {
+  border: 5px solid #e5bd66;
+  width: 100%;
+  padding-top: 15px;
+  padding-inline: 15px;
+  padding-bottom: 15px;
+}
+.eighth-bg__block-block img {
+  width: 70%;
+  margin-bottom: 10px;
+}
+.eighth-bg__block-block h2 {
+  font-weight: 500;
+  font-size: 25px;
+}
+.eighth-bg__block-block p {
+  font-weight: 300;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 640px) {
+  .eighth-bg__block-block p {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+}
+
+.qwerty {
+  width: 90%;
+  display: block;
+  margin-bottom: 50px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 640px) {
+  .qwerty {
+    margin-top: 30px;
+    width: 30%;
+  }
+}
+
+.ninth-bg {
+  background-color: black;
+  background-size: cover; /* Изображение будет масштабироваться, чтобы покрыть весь элемент */
+  background-position: center; /* Центрируем изображение по всему элементу */
+  background-repeat: no-repeat;
+  color: #fff;
+  padding-inline: 44px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  text-align: center;
+}
+.ninth-bg h1 {
+  margin-bottom: 30px;
+  opacity: 70%;
+  font-weight: 600;
+  font-size: 35px;
+}
+.ninth-bg-p {
+  text-align: left;
+  margin-bottom: 20px;
+  font-size: 15px;
+  display: block;
+  margin: 0 auto;
+}
+@media screen and (min-width: 640px) {
+  .ninth-bg-p {
+    font-size: 30px;
+  }
+}
+.ninth-bg p {
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+.ninth-bg h2 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: #fb28ff;
+}
+.ninth-bg-mask {
+  width: 20%;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 640px) {
+  .ninth-bg-mask {
+    margin-top: 30px;
+    width: 10%;
+  }
+}
+.ninth-bg-sv {
+  font-weight: 400;
+  font-size: 40px;
+  opacity: 50%;
+  letter-spacing: 5px;
+}
+
+.purple-background {
+  background-color: rgba(255, 0, 255, 0.2392156863); /* Фиолетовый цвет */
+  padding: 20px; /* Добавление отступов для визуального комфорта */
+  color: white; /* Белый цвет текста для контраста */
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 640px) {
+  .df {
+    margin: 0 auto;
+    width: 50%;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
